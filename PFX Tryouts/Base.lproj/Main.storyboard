@@ -125,7 +125,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Brd-Ss-TAs" kind="show" id="sj3-Q1-FPB"/>
+                                    <segue destination="Brd-Ss-TAs" kind="popoverPresentation" popoverAnchorView="BPO-Ig-ugj" id="sj3-Q1-FPB">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-tb-LNx">
@@ -168,8 +170,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acj-wd-qwO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="nAo-zW-LXz"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Add Payment" id="Ozw-Iw-TLr">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="40x-0b-jp7"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ryc-Rd-cHe"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acj-wd-qwO" firstAttribute="leading" secondItem="Oeg-FE-Tgv" secondAttribute="leading" id="7lC-3P-J5g"/>
+                            <constraint firstAttribute="trailing" secondItem="acj-wd-qwO" secondAttribute="trailing" id="BJv-3C-PHC"/>
+                            <constraint firstItem="acj-wd-qwO" firstAttribute="top" secondItem="Tyx-CG-BfM" secondAttribute="bottom" constant="-20" id="W9H-ZY-foa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ADD PAYMENT" id="32U-Xm-s6E">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Tau-tp-Cr8"/>
